@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Segenap Jiwa - Kopi untuk Jiwa. Coffee shop dengan kopi specialty dari petani lokal Indonesia."
+    />
+    <title>Segenap Jiwa | Kopi untuk Jiwa</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#E8A84E",
+              "background-light": "#f8f7f6",
+              "background-dark": "#1a1410",
+            },
+            fontFamily: {
+              display: ["Epilogue", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Smooth scroll global */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Offset agar tidak tertutup navbar saat scroll */
+      #menu {
+        scroll-margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 font-display"
+  >
+    <!-- Navigation -->
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="images/senjalogo.png"
+            alt="Senja - Segenap Jiwa Coffee"
+            class="logo-image"
+          />
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#location" class="nav-link">Location</a>
+        </div>
+
+        <!-- Tombol "Lihat Menu" diubah jadi <a> agar bisa scroll ke #menu -->
+        <a href="#menu" class="btn-primary">Lihat Menu</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYVZGnEb0_iYb_D-jNY_H-PNM8Ce2g4wK0iK7YucIHaepIVp26-Kvd-DeoCVlx_eBrtoeTeaRlWtGZ2y0zkA9ldg7FQC38mJPukkKOx5Z2wUfqZdyIF-9W3sS72_I8yc--w5nfGzKB_BW8haZH5fjBwhmzE8P64JckTUSV4H43973f36IzNMufx9GSpyEuNAx1NsC9uIn6ZDTbFbqsy73cXGXdLTmmQnfkCHrlhOcQmwNQxeEQ51QS6yas1dBTNUteCxDKz_5ccPJK"
+        alt="Steaming cup of coffee"
+        class="hero-image"
+      />
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">Established 2022</span>
+          <h1 class="hero-title">
+            Segenap Jiwa<br />
+            <span class="text-primary">Coffee and Boba.</span>
+          </h1>
+          <div class="hero-buttons">
+            <button class="btn-primary-large">Order Now</button>
+            <button class="btn-secondary-large">Visit Our Shop</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="material-icons">expand_more</span>
+      </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section class="section-menu" id="menu">
+      <div class="container">
+        <!-- Coffee Series -->
+        <div class="menu-category">
+          <div class="section-header">
+            <div>
+              <h2 class="section-subtitle">Coffee Lovers</h2>
+              <h3 class="section-title">Coffee Series ☕</h3>
+            </div>
+            <a href="#" class="view-all-link">View All Coffee</a>
+          </div>
+
+          <!-- Coffee Menu Image -->
+          <div class="menu-showcase" data-animate="fade-up">
+            <img
+              src="images/coffe.png"
+              alt="SENJA Coffee Menu"
+              class="menu-image menu-img-animate"
+            />
+          </div>
+        </div>
+
+        <!-- Milk Series -->
+        <div class="menu-category mt-24">
+          <div class="section-header">
+            <div>
+              <h2 class="section-subtitle">Non-Coffee Options</h2>
+              <h3 class="section-title">Milk Series 🥛</h3>
+            </div>
+            <a href="#" class="view-all-link">View All Drinks</a>
+          </div>
+
+          <!-- Milk Menu Image -->
+          <div class="menu-showcase" data-animate="fade-up">
+            <img
+              src="images/milk.jpg"
+              alt="SENJA Milk Series Menu"
+              class="menu-image menu-img-animate"
+            />
+          </div>
+
+          <!-- Topping Info -->
+          <div class="topping-info">
+            <h4 class="topping-title">🧋 Available Toppings</h4>
+            <div class="topping-grid">
+              <div class="topping-item">
+                <span class="topping-name">Boba</span>
+                <span class="topping-price">Free</span>
+              </div>
+              <div class="topping-item">
+                <span class="topping-name">Ice Cream</span>
+                <span class="topping-price">+3K</span>
+              </div>
+              <div class="topping-item">
+                <span class="topping-name">Oreo</span>
+                <span class="topping-price">+2K</span>
+              </div>
+              <div class="topping-item">
+                <span class="topping-name">Regal</span>
+                <span class="topping-price">+2K</span>
+              </div>
+              <div class="topping-item">
+                <span class="topping-name">Cereal</span>
+                <span class="topping-price">+2K</span>
+              </div>
+            </div>
+            <p class="topping-note">* Semua milk series sudah include boba</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section-location" id="location">
+      <div class="container">
+        <div class="location-card">
+          <div class="location-info">
+            <h2 class="section-subtitle">Visit Us</h2>
+            <h3 class="location-title">The Andika Mini Market Corner</h3>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="material-icons">location_on</span>
+                <div>
+                  <h4 class="contact-label">Address</h4>
+                  <p class="contact-text">
+                    Barat Andika MM, Jalan Raya Eromoko, Kec. Eromoko, Kabupaten
+                    Wonogiri, Jawa Tengah 57663
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="material-icons">schedule</span>
+                <div>
+                  <h4 class="contact-label">Opening Hours</h4>
+                  <p class="contact-text">Setiap Hari: 10:00 AM – 21:00 PM</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="material-icons">phone</span>
+                <div>
+                  <h4 class="contact-label">Contact</h4>
+                  <p class="contact-text">+62 822-2314-2624</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tombol Get Directions → buka Google Maps langsung -->
+            <a
+              href="https://maps.app.goo.gl/AHfx9RM1xzuGTD3T9"
+              target="_blank"
+              id="btnDirections"
+              class="btn-directions"
+            >
+              <span class="material-icons">directions</span>
+              Get Directions
+            </a>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505982.36643698154!2d110.49842403809507!3d-7.791175187675502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bcded5bb435f1%3A0xa75f690f4e6b3a2c!2sSENJA%20eromoko%20-%20Boba%2C%20Milk%20%26%20Coffe%20-!5e0!3m2!1sid!2sid!4v1771322004731!5m2!1sid!2sid"
+              class="map-iframe"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lokasi SENJA Eromoko"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img
+              src="images/senjalogo.png"
+              alt="Senja - Segenap Jiwa Coffee"
+              class="logo-image-footer"
+            />
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/senja.ku_id?igsh=a2JkaWNjdDc1bnQ4"
+              target="_blank"
+              class="social-link"
+              >Instagram</a
+            >
+            <a
+              href="https://www.tiktok.com/@senja.ku_id?_r=1&_t=ZS-93zYHjLcGbU"
+              target="_blank"
+              class="social-link"
+              >TikTok</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2022-2026 Segenap Jiwa Coffee. All rights reserved.
+          </p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
